@@ -4,11 +4,11 @@ const About = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
+      <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-12 md:py-20">
         <div className="container mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">About Us</h1>
-          <p className="text-xl md:text-2xl max-w-3xl mx-auto">
-            Celebrating digital art and empowering artists to share their vision with the world
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">Hakkımızda</h1>
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto px-4">
+            Dijital sanatı kutluyor ve sanatçıların vizyonlarını dünyayla paylaşmalarını güçlendiriyoruz
           </p>
         </div>
       </section>
@@ -16,49 +16,49 @@ const About = () => {
       {/* Mission Section */}
       <section className="page-container">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-6 text-center">Our Mission</h2>
-          <p className="text-lg text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-            Digital Art Gallery was founded with a simple yet powerful mission: to create a platform where digital artists
-            can showcase their work to a global audience and art enthusiasts can discover extraordinary pieces that push
-            the boundaries of creativity.
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-center">Misyonumuz</h2>
+          <p className="text-sm sm:text-base md:text-lg text-gray-700 dark:text-gray-300 mb-4 sm:mb-6 leading-relaxed">
+            Dijital Sanat Galerisi basit ama güçlü bir misyonla kuruldu: dijital sanatçıların eserlerini küresel bir
+            kitleye sergileyebilecekleri ve sanat meraklılarının yaratıcılığın sınırlarını zorlayan olağanüstü eserleri
+            keşfedebilecekleri bir platform oluşturmak.
           </p>
-          <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-            We believe that digital art represents the future of creative expression, combining traditional artistic
-            principles with cutting-edge technology to create experiences that were previously impossible. Our gallery
-            serves as a bridge between talented artists and collectors who appreciate innovation in art.
+          <p className="text-sm sm:text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+            Dijital sanatın yaratıcı ifadenin geleceğini temsil ettiğine, geleneksel sanatsal ilkeleri en son teknolojiyle
+            birleştirerek daha önce imkansız olan deneyimler yarattığına inanıyoruz. Galerimiz, yetenekli sanatçılar ile
+            sanattaki yeniliği takdir eden koleksiyoncular arasında bir köprü görevi görür.
           </p>
         </div>
       </section>
 
       {/* Values Section */}
-      <section className="bg-gray-50 dark:bg-gray-800 py-16">
+      <section className="bg-gray-50 dark:bg-gray-800 py-12 md:py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center">Our Values</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="card p-8 text-center">
-              <div className="text-4xl mb-4">🎨</div>
-              <h3 className="text-xl font-bold mb-4">Artistic Excellence</h3>
-              <p className="text-gray-600 dark:text-gray-400">
-                We curate only the finest digital artworks, ensuring every piece meets our high standards for creativity
-                and technical execution.
+          <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center">Değerlerimiz</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-6xl mx-auto">
+            <div className="card p-6 sm:p-8 text-center">
+              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎨</div>
+              <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Sanatsal Mükemmellik</h3>
+              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400">
+                Yalnızca en iyi dijital sanat eserlerini seçiyor, her eserin yaratıcılık ve teknik uygulama açısından
+                yüksek standartlarımızı karşılamasını sağlıyoruz.
               </p>
             </div>
 
-            <div className="card p-8 text-center">
-              <div className="text-4xl mb-4">🌟</div>
-              <h3 className="text-xl font-bold mb-4">Artist Support</h3>
-              <p className="text-gray-600 dark:text-gray-400">
-                We're committed to supporting artists by providing them with a platform to reach collectors and art
-                enthusiasts worldwide.
+            <div className="card p-6 sm:p-8 text-center">
+              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🌟</div>
+              <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Sanatçı Desteği</h3>
+              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400">
+                Sanatçılara dünya çapında koleksiyonculara ve sanat meraklılarına ulaşabilecekleri bir platform sağlayarak
+                onları desteklemeye kararlıyız.
               </p>
             </div>
 
-            <div className="card p-8 text-center">
-              <div className="text-4xl mb-4">🚀</div>
-              <h3 className="text-xl font-bold mb-4">Innovation</h3>
-              <p className="text-gray-600 dark:text-gray-400">
-                We embrace new technologies and techniques, constantly evolving to provide the best experience for artists
-                and collectors.
+            <div className="card p-6 sm:p-8 text-center">
+              <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🚀</div>
+              <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Yenilikçilik</h3>
+              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400">
+                Yeni teknolojileri ve teknikleri benimseyerek sanatçılar ve koleksiyoncular için en iyi deneyimi sunmak
+                üzere sürekli gelişiyoruz.
               </p>
             </div>
           </div>
@@ -68,43 +68,43 @@ const About = () => {
       {/* Story Section */}
       <section className="page-container">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-6 text-center">Our Story</h2>
-          <div className="space-y-6 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-center">Hikayemiz</h2>
+          <div className="space-y-4 sm:space-y-6 text-sm sm:text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
             <p>
-              Digital Art Gallery began in 2020 when a group of art enthusiasts and technology professionals recognized
-              a gap in the art world. While digital art was gaining recognition, there weren't enough dedicated spaces
-              that truly celebrated the medium and the artists behind it.
+              Dijital Sanat Galerisi, 2020 yılında bir grup sanat meraklısı ve teknoloji profesyoneli sanat dünyasında bir
+              boşluk olduğunu fark ettiğinde başladı. Dijital sanat tanınırlık kazanırken, bu ortamı ve arkasındaki
+              sanatçıları gerçekten kutlayan yeterli özel alan yoktu.
             </p>
             <p>
-              We started with a small collection of artworks from five pioneering digital artists. Today, we're proud to
-              showcase hundreds of pieces from talented creators around the globe, spanning various styles and techniques
-              from abstract digital paintings to mixed media sculptures.
+              Beş öncü dijital sanatçıdan oluşan küçük bir eser koleksiyonuyla başladık. Bugün, soyut dijital resimlerden
+              karma medya heykellere kadar çeşitli tarz ve teknikleri kapsayan, dünyanın dört bir yanından yetenekli
+              yaratıcıların yüzlerce eserini sergilemekten gurur duyuyoruz.
             </p>
             <p>
-              Our platform has grown to become more than just a gallery - it's a community where artists can connect with
-              collectors, share their creative process, and push the boundaries of what's possible in digital art. We've
-              facilitated countless sales and helped launch the careers of emerging artists who have gone on to achieve
-              international recognition.
+              Platformumuz sadece bir galeriden daha fazlası haline geldi - sanatçıların koleksiyoncularla bağlantı
+              kurabileceği, yaratıcı süreçlerini paylaşabileceği ve dijital sanatta mümkün olanın sınırlarını
+              zorlayabileceği bir topluluk. Sayısız satışı kolaylaştırdık ve uluslararası tanınırlık kazanan gelişmekte olan
+              sanatçıların kariyerlerini başlatmaya yardımcı olduk.
             </p>
           </div>
         </div>
       </section>
 
       {/* Team Section */}
-      <section className="bg-gray-50 dark:bg-gray-800 py-16">
+      <section className="bg-gray-50 dark:bg-gray-800 py-12 md:py-16">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-12 text-center">Our Team</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center">Ekibimiz</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto">
             <div className="text-center">
               <img
                 src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400"
                 alt="Team Member"
-                className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+                className="w-24 h-24 sm:w-32 sm:h-32 rounded-full mx-auto mb-3 sm:mb-4 object-cover"
               />
-              <h3 className="text-xl font-bold mb-2">Michael Chen</h3>
-              <p className="text-blue-600 dark:text-blue-400 mb-2">Founder & Director</p>
-              <p className="text-gray-600 dark:text-gray-400">
-                Former museum curator with 15 years of experience in contemporary art.
+              <h3 className="text-lg sm:text-xl font-bold mb-2">Mehmet Yılmaz</h3>
+              <p className="text-sm sm:text-base text-blue-600 dark:text-blue-400 mb-2">Kurucu & Direktör</p>
+              <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 px-4">
+                Çağdaş sanatta 15 yıllık deneyime sahip eski müze küratörü.
               </p>
             </div>
 
@@ -112,12 +112,12 @@ const About = () => {
               <img
                 src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400"
                 alt="Team Member"
-                className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+                className="w-24 h-24 sm:w-32 sm:h-32 rounded-full mx-auto mb-3 sm:mb-4 object-cover"
               />
-              <h3 className="text-xl font-bold mb-2">Sarah Williams</h3>
-              <p className="text-blue-600 dark:text-blue-400 mb-2">Chief Curator</p>
-              <p className="text-gray-600 dark:text-gray-400">
-                Digital art specialist with a passion for discovering emerging talent.
+              <h3 className="text-lg sm:text-xl font-bold mb-2">Ayşe Demir</h3>
+              <p className="text-sm sm:text-base text-blue-600 dark:text-blue-400 mb-2">Baş Küratör</p>
+              <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 px-4">
+                Gelişmekte olan yetenekleri keşfetme tutkusu olan dijital sanat uzmanı.
               </p>
             </div>
 
@@ -125,12 +125,12 @@ const About = () => {
               <img
                 src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
                 alt="Team Member"
-                className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+                className="w-24 h-24 sm:w-32 sm:h-32 rounded-full mx-auto mb-3 sm:mb-4 object-cover"
               />
-              <h3 className="text-xl font-bold mb-2">David Kumar</h3>
-              <p className="text-blue-600 dark:text-blue-400 mb-2">Technology Director</p>
-              <p className="text-gray-600 dark:text-gray-400">
-                Tech innovator ensuring our platform stays at the cutting edge.
+              <h3 className="text-lg sm:text-xl font-bold mb-2">Can Özkan</h3>
+              <p className="text-sm sm:text-base text-blue-600 dark:text-blue-400 mb-2">Teknoloji Direktörü</p>
+              <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 px-4">
+                Platformumuzun en son teknolojide kalmasını sağlayan teknoloji yenilikçisi.
               </p>
             </div>
           </div>
@@ -139,23 +139,23 @@ const About = () => {
 
       {/* CTA Section */}
       <section className="page-container">
-        <div className="card p-12 text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white">
-          <h2 className="text-3xl font-bold mb-4">Join Our Community</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Whether you're an artist looking to showcase your work or a collector seeking unique pieces, we'd love to have you join us.
+        <div className="card p-6 sm:p-8 md:p-12 text-center bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-3 sm:mb-4">Topluluğumuza Katılın</h2>
+          <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
+            İster eserlerinizi sergilemek isteyen bir sanatçı, ister benzersiz eserler arayan bir koleksiyoncu olun, sizi aramızda görmekten mutluluk duyarız.
           </p>
-          <div className="flex gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
             <Link
               to="/artworks"
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+              className="bg-white text-blue-600 px-6 py-3 sm:px-8 sm:py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors min-h-[44px] inline-flex items-center justify-center text-sm sm:text-base"
             >
-              Browse Artworks
+              Eserleri İncele
             </Link>
             <Link
               to="/contact"
-              className="bg-white/20 backdrop-blur px-8 py-3 rounded-lg font-semibold hover:bg-white/30 transition-colors"
+              className="bg-white/20 backdrop-blur px-6 py-3 sm:px-8 sm:py-3 rounded-lg font-semibold hover:bg-white/30 transition-colors min-h-[44px] inline-flex items-center justify-center text-sm sm:text-base"
             >
-              Get in Touch
+              İletişime Geçin
             </Link>
           </div>
         </div>
