@@ -56,12 +56,6 @@ const ArtworkDetail = () => {
             </Link>
           </p>
 
-          {artwork.price && (
-            <div className="text-2xl sm:text-3xl font-bold text-blue-600 dark:text-blue-400 mb-6 sm:mb-8">
-              ₺{artwork.price.toLocaleString('tr-TR')}
-            </div>
-          )}
-
           <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
             <div className="flex border-b border-gray-200 dark:border-gray-700 pb-2">
               <span className="font-semibold w-24 sm:w-32 text-sm sm:text-base">Yıl:</span>
@@ -93,9 +87,14 @@ const ArtworkDetail = () => {
             </p>
           </div>
 
-          <button className="w-full bg-blue-600 text-white py-3 sm:py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors min-h-[44px] text-sm sm:text-base">
-            Bu Eser Hakkında Bilgi Al
-          </button>
+          {!artwork.disableQuote && (
+            <a
+              href={`mailto:iletisim@eliyte.com?subject=Fiyat Teklifi - ${encodeURIComponent(artwork.title)}`}
+              className="w-full inline-flex items-center justify-center bg-blue-600 text-white py-3 sm:py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors min-h-[44px] text-sm sm:text-base"
+            >
+              Fiyat Teklifi İste
+            </a>
+          )}
         </div>
       </div>
 
@@ -183,10 +182,14 @@ const ArtworkDetail = () => {
                   <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-500 line-clamp-2">
                     {relatedArtwork.description}
                   </p>
-                  {relatedArtwork.price && (
-                    <p className="mt-3 sm:mt-4 text-base sm:text-lg font-semibold text-blue-600 dark:text-blue-400">
-                      ₺{relatedArtwork.price.toLocaleString('tr-TR')}
-                    </p>
+                  {!relatedArtwork.disableQuote && (
+                    <a
+                      href={`mailto:iletisim@eliyte.com?subject=Fiyat Teklifi - ${encodeURIComponent(relatedArtwork.title)}`}
+                      className="mt-3 sm:mt-4 inline-flex items-center justify-center bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors min-h-[44px] text-xs sm:text-sm w-full"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      Fiyat Teklifi İste
+                    </a>
                   )}
                 </div>
               </Link>

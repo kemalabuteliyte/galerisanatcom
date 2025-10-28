@@ -20,11 +20,11 @@ export interface Artwork {
   year: number;
   medium: string;
   dimensions: string;
-  price?: number;
   artistId: string;
   categoryId: string;
   galleryId?: string;
   featured: boolean;
+  disableQuote?: boolean; // If true, "Ask for Quote" button will not be shown
 }
 
 export interface Category {

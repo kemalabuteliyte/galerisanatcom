@@ -20,7 +20,7 @@ const MainLayout = () => {
         <nav className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Link to="/" className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white">
-              Dijital Sanat Galerisi
+              Eliyte
             </Link>
 
             {/* Google Translate Button - Desktop & Mobile */}
@@ -110,6 +110,14 @@ const MainLayout = () => {
                 </li>
                 <li>
                   <Link
+                    to="/submit"
+                    className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                  >
+                    Eser Gönder
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     to="/contact"
                     className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                   >
@@ -171,6 +179,15 @@ const MainLayout = () => {
                 </li>
                 <li>
                   <Link
+                    to="/submit"
+                    onClick={toggleMobileMenu}
+                    className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-2"
+                  >
+                    Eser Gönder
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     to="/contact"
                     onClick={toggleMobileMenu}
                     className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-2"
@@ -194,9 +211,9 @@ const MainLayout = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-xl font-bold mb-4">Dijital Sanat Galerisi</h3>
+              <h3 className="text-xl font-bold mb-4">Eliyte</h3>
               <p className="text-gray-400">
-                Dünya çapında yetenekli sanatçıların en iyi dijital sanat eserlerini sergiliyoruz.
+                Dünya çapında yetenekli sanatçıların en iyi sanat eserlerini sergiliyoruz.
               </p>
             </div>
 
@@ -239,7 +256,7 @@ const MainLayout = () => {
           </div>
 
           <div className="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2025 Dijital Sanat Galerisi. Tüm hakları saklıdır.</p>
+            <p>&copy; 2025 Eliyte. Tüm hakları saklıdır.</p>
           </div>
         </div>
       </footer>

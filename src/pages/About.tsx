@@ -8,7 +8,7 @@ const About = () => {
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">Hakkımızda</h1>
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto px-4">
-            Dijital sanatı kutluyor ve sanatçıların vizyonlarını dünyayla paylaşmalarını güçlendiriyoruz
+            Her türlü sanatı kutluyor ve sanatçıların vizyonlarını dünyayla paylaşmalarını güçlendiriyoruz
           </p>
         </div>
       </section>
@@ -18,13 +18,13 @@ const About = () => {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-center">Misyonumuz</h2>
           <p className="text-sm sm:text-base md:text-lg text-gray-700 dark:text-gray-300 mb-4 sm:mb-6 leading-relaxed">
-            Dijital Sanat Galerisi basit ama güçlü bir misyonla kuruldu: dijital sanatçıların eserlerini küresel bir
+            Eliyte basit ama güçlü bir misyonla kuruldu: sanatçıların her türlü sanat eserlerini küresel bir
             kitleye sergileyebilecekleri ve sanat meraklılarının yaratıcılığın sınırlarını zorlayan olağanüstü eserleri
             keşfedebilecekleri bir platform oluşturmak.
           </p>
           <p className="text-sm sm:text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-            Dijital sanatın yaratıcı ifadenin geleceğini temsil ettiğine, geleneksel sanatsal ilkeleri en son teknolojiyle
-            birleştirerek daha önce imkansız olan deneyimler yarattığına inanıyoruz. Galerimiz, yetenekli sanatçılar ile
+            Her türlü sanatın yaratıcı ifadenin geleceğini temsil ettiğine, geleneksel sanatsal ilkeleri modern yaklaşımlarla
+            birleştirerek benzersiz deneyimler yarattığına inanıyoruz. Galerimiz, yetenekli sanatçılar ile
             sanattaki yeniliği takdir eden koleksiyoncular arasında bir köprü görevi görür.
           </p>
         </div>
@@ -39,7 +39,7 @@ const About = () => {
               <div className="text-3xl sm:text-4xl mb-3 sm:mb-4">🎨</div>
               <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4">Sanatsal Mükemmellik</h3>
               <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400">
-                Yalnızca en iyi dijital sanat eserlerini seçiyor, her eserin yaratıcılık ve teknik uygulama açısından
+                Yalnızca en iyi sanat eserlerini seçiyor, her eserin yaratıcılık ve teknik uygulama açısından
                 yüksek standartlarımızı karşılamasını sağlıyoruz.
               </p>
             </div>
@@ -71,18 +71,18 @@ const About = () => {
           <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-center">Hikayemiz</h2>
           <div className="space-y-4 sm:space-y-6 text-sm sm:text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
             <p>
-              Dijital Sanat Galerisi, 2020 yılında bir grup sanat meraklısı ve teknoloji profesyoneli sanat dünyasında bir
-              boşluk olduğunu fark ettiğinde başladı. Dijital sanat tanınırlık kazanırken, bu ortamı ve arkasındaki
+              Eliyte, 2020 yılında bir grup sanat meraklısı ve profesyonel sanat dünyasında bir
+              boşluk olduğunu fark ettiğinde başladı. Her türlü sanat tanınırlık kazanırken, farklı ortamları ve arkasındaki
               sanatçıları gerçekten kutlayan yeterli özel alan yoktu.
             </p>
             <p>
-              Beş öncü dijital sanatçıdan oluşan küçük bir eser koleksiyonuyla başladık. Bugün, soyut dijital resimlerden
-              karma medya heykellere kadar çeşitli tarz ve teknikleri kapsayan, dünyanın dört bir yanından yetenekli
+              Beş öncü sanatçıdan oluşan küçük bir eser koleksiyonuyla başladık. Bugün, resimden heykele,
+              dijital sanatlardan fotoğrafa kadar çeşitli tarz ve teknikleri kapsayan, dünyanın dört bir yanından yetenekli
               yaratıcıların yüzlerce eserini sergilemekten gurur duyuyoruz.
             </p>
             <p>
               Platformumuz sadece bir galeriden daha fazlası haline geldi - sanatçıların koleksiyoncularla bağlantı
-              kurabileceği, yaratıcı süreçlerini paylaşabileceği ve dijital sanatta mümkün olanın sınırlarını
+              kurabileceği, yaratıcı süreçlerini paylaşabileceği ve sanatta mümkün olanın sınırlarını
               zorlayabileceği bir topluluk. Sayısız satışı kolaylaştırdık ve uluslararası tanınırlık kazanan gelişmekte olan
               sanatçıların kariyerlerini başlatmaya yardımcı olduk.
             </p>

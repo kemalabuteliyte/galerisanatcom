@@ -6,7 +6,7 @@ const Galleries = () => {
     <div className="page-container">
       <h1 className="section-title">Galerilerimiz</h1>
       <p className="text-center text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-8 sm:mb-12 max-w-2xl mx-auto px-4">
-        İstisnai dijital sanat eserlerini sergileyen özenle düzenlenmiş galeri alanlarımızı ziyaret edin
+        İstisnai sanat eserlerini sergileyen özenle düzenlenmiş galeri alanlarımızı ziyaret edin
       </p>
 
       <div className="space-y-12 sm:space-y-16">
@@ -57,10 +57,14 @@ const Galleries = () => {
                       <h4 className="font-semibold text-base sm:text-lg group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                         {artwork.title}
                       </h4>
-                      {artwork.price && (
-                        <p className="text-sm sm:text-base text-blue-600 dark:text-blue-400 font-semibold">
-                          ₺{artwork.price.toLocaleString('tr-TR')}
-                        </p>
+                      {!artwork.disableQuote && (
+                        <a
+                          href={`mailto:iletisim@eliyte.com?subject=Fiyat Teklifi - ${encodeURIComponent(artwork.title)}`}
+                          className="mt-2 inline-flex items-center justify-center bg-blue-600 text-white px-3 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors min-h-[44px] text-xs sm:text-sm w-full"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          Fiyat Teklifi İste
+                        </a>
                       )}
                     </Link>
                   ))}

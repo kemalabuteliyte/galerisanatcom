@@ -128,10 +128,10 @@ const Contact = () => {
               <div>
                 <h3 className="font-semibold text-base sm:text-lg mb-2">E-posta</h3>
                 <a
-                  href="mailto:info@galerisanat.com"
+                  href="mailto:iletisim@eliyte.com"
                   className="text-sm sm:text-base text-blue-600 dark:text-blue-400 hover:underline min-h-[44px] inline-flex items-center"
                 >
-                  info@galerisanat.com
+                  iletisim@eliyte.com
                 </a>
               </div>
 

@@ -10,10 +10,10 @@ const Home = () => {
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-12 md:py-20">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
-            Dijital Sanatı Keşfedin
+            Eliyte Sanat Galerisi
           </h1>
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 max-w-3xl mx-auto px-4">
-            Dünyanın dört bir yanından yetenekli sanatçıların muhteşem dijital sanat eserlerinden oluşan özenle seçilmiş koleksiyonumuzu keşfedin
+            Dünyanın dört bir yanından yetenekli sanatçıların muhteşem sanat eserlerinden oluşan özenle seçilmiş koleksiyonumuzu keşfedin
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
             <Link
@@ -59,10 +59,14 @@ const Home = () => {
                   <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-500 line-clamp-2">
                     {artwork.description}
                   </p>
-                  {artwork.price && (
-                    <p className="mt-3 sm:mt-4 text-base sm:text-lg font-semibold text-blue-600 dark:text-blue-400">
-                      ₺{artwork.price.toLocaleString('tr-TR')}
-                    </p>
+                  {!artwork.disableQuote && (
+                    <a
+                      href={`mailto:iletisim@eliyte.com?subject=Fiyat Teklifi - ${encodeURIComponent(artwork.title)}`}
+                      className="mt-3 sm:mt-4 inline-flex items-center justify-center bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors min-h-[44px] text-xs sm:text-sm w-full"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      Fiyat Teklifi İste
+                    </a>
                   )}
                 </div>
               </Link>
