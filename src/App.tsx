@@ -9,7 +9,12 @@ import Artist from './pages/Artist';
 import Contact from './pages/Contact';
 import About from './pages/About';
 import SubmitArtwork from './pages/SubmitArtwork';
+import NotFound from './pages/NotFound';
 
+/**
+ * Main App component
+ * Defines all routes for the application
+ */
 function App() {
   return (
     <Router>
@@ -24,6 +29,8 @@ function App() {
           <Route path="submit" element={<SubmitArtwork />} />
           <Route path="contact" element={<Contact />} />
           <Route path="about" element={<About />} />
+          {/* 404 catch-all route */}
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </Router>

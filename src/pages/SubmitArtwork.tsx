@@ -11,7 +11,7 @@ const SubmitArtwork = () => {
           Eserinizi Gönderin
         </h1>
         <p className="text-lg md:text-xl max-w-3xl">
-          Eliyte Sanat Galerisi olarak her türlü sanat eserini destekliyoruz. Sanatçıların eserlerini dünya ile paylaşmasına yardımcı olmaktan gurur duyuyoruz.
+          Eliyte™ Sanat Galerisi olarak her türlü sanat eserini destekliyoruz. Sanatçıların eserlerini dünya ile paylaşmasına yardımcı olmaktan gurur duyuyoruz.
         </p>
       </div>
 
@@ -28,7 +28,7 @@ const SubmitArtwork = () => {
         </div>
 
         <p className="text-base md:text-lg text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-          Eliyte Sanat Galerisi, Türkiye'nin ilk kapsamlı dijital sanat koleksiyonudur. Dijital sanat, geleneksel resim,
+          Eliyte™ Sanat Galerisi, Türkiye'nin ilk kapsamlı dijital sanat koleksiyonudur. Dijital sanat, geleneksel resim,
           heykel, fotoğraf ve tüm diğer sanat formlarını destekliyoruz. Her sanatçı, eserlerini geniş bir kitleyle
           buluşturma fırsatına sahiptir.
         </p>

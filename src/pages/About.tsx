@@ -18,7 +18,7 @@ const About = () => {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-center">Misyonumuz</h2>
           <p className="text-sm sm:text-base md:text-lg text-gray-700 dark:text-gray-300 mb-4 sm:mb-6 leading-relaxed">
-            Eliyte basit ama güçlü bir misyonla kuruldu: sanatçıların her türlü sanat eserlerini küresel bir
+            Eliyte™ basit ama güçlü bir misyonla kuruldu: sanatçıların her türlü sanat eserlerini küresel bir
             kitleye sergileyebilecekleri ve sanat meraklılarının yaratıcılığın sınırlarını zorlayan olağanüstü eserleri
             keşfedebilecekleri bir platform oluşturmak.
           </p>
@@ -71,7 +71,7 @@ const About = () => {
           <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-center">Hikayemiz</h2>
           <div className="space-y-4 sm:space-y-6 text-sm sm:text-base md:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
             <p>
-              Eliyte, 2020 yılında bir grup sanat meraklısı ve profesyonel sanat dünyasında bir
+              Eliyte™, 2020 yılında bir grup sanat meraklısı ve profesyonel sanat dünyasında bir
               boşluk olduğunu fark ettiğinde başladı. Her türlü sanat tanınırlık kazanırken, farklı ortamları ve arkasındaki
               sanatçıları gerçekten kutlayan yeterli özel alan yoktu.
             </p>
