@@ -1,6 +1,10 @@
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { getFeaturedArtworks, getArtistById, artists, testimonials, statistics } from '../data/mockData';
+import { useFavorites } from '../hooks/useFavorites';
 import SEO from '../components/SEO';
+import { FavoriteButton } from '../components/FavoriteButton';
+import { ShareButton } from '../components/ShareButton';
 
 /**
  * Home page component with enhanced sections
@@ -9,6 +13,16 @@ import SEO from '../components/SEO';
 const Home = () => {
   const featuredArtworks = getFeaturedArtworks();
   const featuredArtists = artists.slice(0, 3);
+  const navigate = useNavigate();
+  const [searchQuery, setSearchQuery] = useState('');
+  const { isFavorite } = useFavorites();
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      navigate(`/artworks?search=${encodeURIComponent(searchQuery)}`);
+    }
+  };
 
   return (
     <>
@@ -19,15 +33,41 @@ const Home = () => {
       />
       <div>
         {/* Hero Section */}
-        <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-12 md:py-20">
+        <section
+          className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-12 md:py-20 transition-all duration-1000 opacity-100 translate-y-0"
+        >
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 animate-fade-in">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
               Eliyte™ Sanat Galerisi
             </h1>
             <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 md:mb-8 max-w-3xl mx-auto px-4">
               Dünyanın dört bir yanından yetenekli sanatçıların muhteşem sanat eserlerinden oluşan
               özenle seçilmiş koleksiyonumuzu keşfedin
             </p>
+
+            {/* Search Bar in Hero */}
+            <form onSubmit={handleSearch} className="max-w-2xl mx-auto mb-6 md:mb-8 px-4">
+              <div className="relative">
+                <input
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  placeholder="Eser veya sanatçı ara..."
+                  className="w-full px-6 py-4 pr-12 rounded-lg text-gray-800 placeholder-gray-500 focus:outline-none focus:ring-4 focus:ring-white/50 text-base sm:text-lg"
+                  aria-label="Eser veya sanatçı ara"
+                />
+                <button
+                  type="submit"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition-colors"
+                  aria-label="Ara"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                  </svg>
+                </button>
+              </div>
+            </form>
+
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
               <Link
                 to="/artworks"
@@ -48,7 +88,9 @@ const Home = () => {
         </section>
 
         {/* Statistics Section */}
-        <section className="bg-white dark:bg-gray-900 py-12 md:py-16">
+        <section
+          className="bg-white dark:bg-gray-900 py-12 md:py-16 transition-all duration-1000 delay-200 opacity-100 translate-y-0"
+        >
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto">
               {statistics.map((stat) => (
@@ -72,29 +114,56 @@ const Home = () => {
         </section>
 
         {/* Featured Artworks */}
-        <section className="page-container">
+        <section
+          className="page-container transition-all duration-1000 delay-300 opacity-100 translate-y-0"
+        >
           <h2 className="section-title">Öne Çıkan Eserler</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
             {featuredArtworks.map((artwork) => {
               const artist = getArtistById(artwork.artistId);
+              const artworkUrl = `${window.location.origin}/artwork/${artwork.id}`;
+
               return (
-                <Link
-                  key={artwork.id}
-                  to={`/artwork/${artwork.id}`}
-                  className="card group"
-                  aria-label={`${artwork.title} eserine git`}
-                >
-                  <div className="relative overflow-hidden h-48 sm:h-56 md:h-64">
-                    <img
-                      src={artwork.image}
-                      alt={artwork.title}
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  </div>
+                <div key={artwork.id} className="card group relative">
+                  <Link to={`/artwork/${artwork.id}`} aria-label={`${artwork.title} eserine git`}>
+                    <div className="relative overflow-hidden h-48 sm:h-56 md:h-64">
+                      <img
+                        src={artwork.image}
+                        alt={artwork.title}
+                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                        loading="lazy"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                      {/* Favorite indicator */}
+                      {isFavorite(artwork.id) && (
+                        <div className="absolute top-2 left-2 bg-red-500 text-white px-2 py-1 rounded-full text-xs flex items-center gap-1">
+                          <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd" />
+                          </svg>
+                          Favori
+                        </div>
+                      )}
+                    </div>
+                  </Link>
+
                   <div className="p-4 sm:p-5 md:p-6">
-                    <h3 className="text-lg sm:text-xl font-bold mb-2">{artwork.title}</h3>
+                    <div className="flex justify-between items-start mb-2">
+                      <Link to={`/artwork/${artwork.id}`} className="flex-1">
+                        <h3 className="text-lg sm:text-xl font-bold">{artwork.title}</h3>
+                      </Link>
+
+                      {/* Action buttons */}
+                      <div className="flex items-center gap-2 ml-2">
+                        <FavoriteButton artworkId={artwork.id} size="sm" />
+                        <ShareButton
+                          url={artworkUrl}
+                          title={artwork.title}
+                          description={artwork.description}
+                        />
+                      </div>
+                    </div>
+
                     <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-2">
                       Sanatçı: {artist?.name}
                     </p>
@@ -112,7 +181,7 @@ const Home = () => {
                       </a>
                     )}
                   </div>
-                </Link>
+                </div>
               );
             })}
           </div>
@@ -201,7 +270,9 @@ const Home = () => {
         </section>
 
         {/* Featured Artists */}
-        <section className="page-container">
+        <section
+          className="page-container transition-all duration-1000 delay-400 opacity-100 translate-y-0"
+        >
           <h2 className="section-title">Öne Çıkan Sanatçılar</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
             {featuredArtists.map((artist) => (

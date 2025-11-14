@@ -1,6 +1,7 @@
 import { Link, Outlet } from 'react-router-dom';
 import { useState } from 'react';
 import ScrollToTop from '../components/ScrollToTop';
+import { useFavorites } from '../hooks/useFavorites';
 
 /**
  * Main layout component
@@ -10,6 +11,7 @@ const MainLayout = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [newsletterEmail, setNewsletterEmail] = useState('');
   const [newsletterStatus, setNewsletterStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const { favorites } = useFavorites();
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -98,7 +100,7 @@ const MainLayout = () => {
               </button>
 
               {/* Desktop Menu */}
-              <ul className="hidden lg:flex space-x-6">
+              <ul className="hidden lg:flex space-x-6 items-center">
                 <li>
                   <Link
                     to="/"
@@ -129,6 +131,19 @@ const MainLayout = () => {
                     className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                   >
                     Galeriler
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/favorites"
+                    className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors relative"
+                  >
+                    Favoriler
+                    {favorites.length > 0 && (
+                      <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                        {favorites.length}
+                      </span>
+                    )}
                   </Link>
                 </li>
                 <li>
@@ -197,6 +212,20 @@ const MainLayout = () => {
                     className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-2"
                   >
                     Galeriler
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/favorites"
+                    onClick={toggleMobileMenu}
+                    className="block text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors py-2 flex items-center justify-between"
+                  >
+                    Favoriler
+                    {favorites.length > 0 && (
+                      <span className="bg-red-500 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center">
+                        {favorites.length}
+                      </span>
+                    )}
                   </Link>
                 </li>
                 <li>
@@ -330,14 +359,14 @@ const MainLayout = () => {
                   </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                  <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors">
                     Gizlilik Politikası
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                  <Link to="/terms" className="text-gray-400 hover:text-white transition-colors">
                     Kullanım Koşulları
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -386,15 +415,15 @@ const MainLayout = () => {
                 </p>
               </div>
               <div className="flex gap-6 text-sm">
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors">
                   Gizlilik
-                </a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                </Link>
+                <Link to="/terms" className="text-gray-400 hover:text-white transition-colors">
                   Koşullar
-                </a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                </Link>
+                <Link to="/privacy#cookies" className="text-gray-400 hover:text-white transition-colors">
                   Çerezler
-                </a>
+                </Link>
               </div>
             </div>
           </div>
